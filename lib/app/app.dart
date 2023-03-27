@@ -10,5 +10,5 @@ void main() async {
       statusBarColor: Colors.black.withOpacity(0.2),
       statusBarIconBrightness: Brightness.light));
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(const App());
+  runApp(App());
 }
