@@ -26,6 +26,7 @@ class Routes {
 
   void configureRoutes() {
     router.define(root, handler: _splashHandler);
-    router.define(auth, handler: _authHandler, transitionType: TransitionType.native);
+    router.define(auth,
+        handler: _authHandler, transitionType: TransitionType.native);
   }
 }

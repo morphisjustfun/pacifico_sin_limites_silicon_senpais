@@ -19,4 +19,48 @@ class AppFontStyles {
     fontSize: 15.sp,
     color: AppColors.primaryTextColor,
   );
+
+  static TextStyle primaryTextBold16 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 32.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle secondaryTextBold16 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 32.sp,
+    color: AppColors.secondaryColor,
+  );
+
+  static TextStyle greyIconColorRegular14 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w400,
+      color: AppColors.greyIconColor,
+      fontSize: 14.sp);
+
+  static TextStyle labelRegular14 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w400,
+      color: AppColors.labelColor,
+      fontSize: 14.sp);
+
+  static TextStyle redRegular11 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w400,
+      color: Colors.red,
+      fontSize: 11.sp);
+
+  static TextStyle buttonMedium16 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w500,
+    fontSize: 16.sp,
+  );
+
+  static TextStyle whiteMedium16 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w500,
+      color: Colors.white,
+      fontSize: 16.sp);
 }
