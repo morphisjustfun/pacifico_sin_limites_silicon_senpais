@@ -11,6 +11,7 @@ class LoginFormState with _$LoginFormState {
     @Default(null) String? dniError,
     @Default(false) bool submiting,
     @Default(false) bool submitted,
+    @Default(false) bool errorSubmit,
   }) = _LoginState;
 
   bool get isValidForm => dni.isNotEmpty && dniError == null;

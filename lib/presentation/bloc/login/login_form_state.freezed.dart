@@ -20,6 +20,7 @@ mixin _$LoginFormState {
   String? get dniError => throw _privateConstructorUsedError;
   bool get submiting => throw _privateConstructorUsedError;
   bool get submitted => throw _privateConstructorUsedError;
+  bool get errorSubmit => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LoginFormStateCopyWith<LoginFormState> get copyWith =>
@@ -32,7 +33,12 @@ abstract class $LoginFormStateCopyWith<$Res> {
           LoginFormState value, $Res Function(LoginFormState) then) =
       _$LoginFormStateCopyWithImpl<$Res, LoginFormState>;
   @useResult
-  $Res call({String dni, String? dniError, bool submiting, bool submitted});
+  $Res call(
+      {String dni,
+      String? dniError,
+      bool submiting,
+      bool submitted,
+      bool errorSubmit});
 }
 
 /// @nodoc
@@ -52,6 +58,7 @@ class _$LoginFormStateCopyWithImpl<$Res, $Val extends LoginFormState>
     Object? dniError = freezed,
     Object? submiting = null,
     Object? submitted = null,
+    Object? errorSubmit = null,
   }) {
     return _then(_value.copyWith(
       dni: null == dni
@@ -70,6 +77,10 @@ class _$LoginFormStateCopyWithImpl<$Res, $Val extends LoginFormState>
           ? _value.submitted
           : submitted // ignore: cast_nullable_to_non_nullable
               as bool,
+      errorSubmit: null == errorSubmit
+          ? _value.errorSubmit
+          : errorSubmit // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -82,7 +93,12 @@ abstract class _$$_LoginStateCopyWith<$Res>
       __$$_LoginStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String dni, String? dniError, bool submiting, bool submitted});
+  $Res call(
+      {String dni,
+      String? dniError,
+      bool submiting,
+      bool submitted,
+      bool errorSubmit});
 }
 
 /// @nodoc
@@ -100,6 +116,7 @@ class __$$_LoginStateCopyWithImpl<$Res>
     Object? dniError = freezed,
     Object? submiting = null,
     Object? submitted = null,
+    Object? errorSubmit = null,
   }) {
     return _then(_$_LoginState(
       dni: null == dni
@@ -118,6 +135,10 @@ class __$$_LoginStateCopyWithImpl<$Res>
           ? _value.submitted
           : submitted // ignore: cast_nullable_to_non_nullable
               as bool,
+      errorSubmit: null == errorSubmit
+          ? _value.errorSubmit
+          : errorSubmit // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -129,7 +150,8 @@ class _$_LoginState extends _LoginState {
       {this.dni = '',
       this.dniError = null,
       this.submiting = false,
-      this.submitted = false})
+      this.submitted = false,
+      this.errorSubmit = false})
       : super._();
 
   @override
@@ -144,10 +166,13 @@ class _$_LoginState extends _LoginState {
   @override
   @JsonKey()
   final bool submitted;
+  @override
+  @JsonKey()
+  final bool errorSubmit;
 
   @override
   String toString() {
-    return 'LoginFormState(dni: $dni, dniError: $dniError, submiting: $submiting, submitted: $submitted)';
+    return 'LoginFormState(dni: $dni, dniError: $dniError, submiting: $submiting, submitted: $submitted, errorSubmit: $errorSubmit)';
   }
 
   @override
@@ -161,12 +186,14 @@ class _$_LoginState extends _LoginState {
             (identical(other.submiting, submiting) ||
                 other.submiting == submiting) &&
             (identical(other.submitted, submitted) ||
-                other.submitted == submitted));
+                other.submitted == submitted) &&
+            (identical(other.errorSubmit, errorSubmit) ||
+                other.errorSubmit == errorSubmit));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, dni, dniError, submiting, submitted);
+  int get hashCode => Object.hash(
+      runtimeType, dni, dniError, submiting, submitted, errorSubmit);
 
   @JsonKey(ignore: true)
   @override
@@ -180,7 +207,8 @@ abstract class _LoginState extends LoginFormState {
       {final String dni,
       final String? dniError,
       final bool submiting,
-      final bool submitted}) = _$_LoginState;
+      final bool submitted,
+      final bool errorSubmit}) = _$_LoginState;
   const _LoginState._() : super._();
 
   @override
@@ -191,6 +219,8 @@ abstract class _LoginState extends LoginFormState {
   bool get submiting;
   @override
   bool get submitted;
+  @override
+  bool get errorSubmit;
   @override
   @JsonKey(ignore: true)
   _$$_LoginStateCopyWith<_$_LoginState> get copyWith =>

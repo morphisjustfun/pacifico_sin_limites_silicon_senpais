@@ -17,4 +17,7 @@ class AppColors {
   static const Color disableTextColor = Color.fromRGBO(98, 98, 98, 1);
 
   static const Color secondaryTextColor = Color.fromRGBO(82, 82, 82, 1); // Mortar
+  static const Color errorButtonColor = Color.fromRGBO(249, 35, 74, 1.0);
+  static const Color brownishGrey = Color.fromRGBO(71, 79, 87, 1.0);
+
 }

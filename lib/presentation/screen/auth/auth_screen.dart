@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pacifico_sin_limites_silicon_senpais/injectable.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/bloc/login/login_form_cubit.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/bloc/login/login_form_state.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/button/app_flat_button.dart';
+import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/dialog/error_dialog.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/dialog/loading_dialog.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/textfield/app_textfield.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/resources/colors.dart';
@@ -25,7 +27,7 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   void initState() {
     super.initState();
-    _loginFormCubit = LoginFormCubit();
+    _loginFormCubit = getIt<LoginFormCubit>();
     _loadingDialog = LoadingDialog(context: context);
 
     _dniController = TextEditingController();
@@ -47,6 +49,11 @@ class _AuthScreenState extends State<AuthScreen> {
             } else {
               _loadingDialog.hide();
             }
+
+            if (state.errorSubmit) {
+              ErrorDialog(description: 'El DNI ingresado no es válido').show(context);
+            }
+
           },
           builder: (context, state) {
             return Scaffold(
@@ -79,9 +86,11 @@ class _AuthScreenState extends State<AuthScreen> {
                             text: 'Iniciar Sesión',
                             backgroundColor: AppColors.secondaryColor,
                             textColor: AppColors.primaryTextColor,
-                            onPressed: state.isValidForm ? () {
-                              _loginFormCubit.submit();
-                            } : null,
+                            onPressed: state.isValidForm
+                                ? () {
+                                    _loginFormCubit.submit();
+                                  }
+                                : null,
                           ),
                         ),
                       ],

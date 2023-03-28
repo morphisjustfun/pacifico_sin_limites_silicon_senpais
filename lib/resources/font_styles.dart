@@ -63,4 +63,16 @@ class AppFontStyles {
       fontWeight: FontWeight.w500,
       color: Colors.white,
       fontSize: 16.sp);
+
+  static TextStyle brownishGreyRegular16 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w400,
+      color: AppColors.brownishGrey,
+      fontSize: 16.sp);
+
+  static TextStyle primaryColorMedium16 = TextStyle(
+      fontFamily: _primaryFontFamily,
+      fontWeight: FontWeight.w500,
+      color: AppColors.primaryColor,
+      fontSize: 16.sp);
 }

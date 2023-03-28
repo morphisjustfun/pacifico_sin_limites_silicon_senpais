@@ -1,15 +1,21 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'user_preference_model.freezed.dart';
+part 'user_preference_model.g.dart';
 
-@freezed
-class UserPreferenceModel with _$UserPreferenceModel {
-  const factory UserPreferenceModel({
-    required String dni,
-    required int age,
-    required double lat,
-    required double lon,
-    required double stratum,
-    required int group,
-  }) = _UserPreferenceModel;
+@JsonSerializable(explicitToJson: true)
+class UserPreferenceModel {
+  final String dni;
+  final int age;
+  final double lat;
+  final double lon;
+  final double stratum;
+  final int group;
+
+  UserPreferenceModel(
+      this.dni, this.age, this.lat, this.lon, this.stratum, this.group);
+
+  factory UserPreferenceModel.fromJson(Map<String, dynamic> json) =>
+      _$UserPreferenceModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserPreferenceModelToJson(this);
 }
