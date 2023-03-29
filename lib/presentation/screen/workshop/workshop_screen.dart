@@ -1,3 +1,4 @@
+import "dart:math";
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/data/local/model/workshop_model.dart';
@@ -9,6 +10,12 @@ import 'package:pacifico_sin_limites_silicon_senpais/resources/colors.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/resources/constants.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/resources/font_styles.dart';
 import 'package:collection/collection.dart';
+
+T getRandomElement<T>(List<T> list) {
+  final random = Random();
+  var i = random.nextInt(list.length);
+  return list[i];
+}
 
 class WorkshopScreen extends StatelessWidget {
   final String workshopName;
@@ -40,6 +47,18 @@ class WorkshopScreen extends StatelessWidget {
                   element.group == snapshot.data!.group &&
                   element.dni != snapshot.data!.dni);
             }
+
+            final districts = [
+              'La Victoria',
+              'Miraflores',
+              'Barranco',
+              'Comas',
+              'Bellavista',
+              'Surco',
+              'Ventanilla',
+              'Independencia',
+              'Breña'
+            ];
 
             return ListView(
               shrinkWrap: true,
@@ -125,7 +144,8 @@ class WorkshopScreen extends StatelessWidget {
                                                     const EdgeInsets.all(16),
                                                 child: Center(
                                                   child: Text(
-                                                      'El presupuesto municipal diario destinado a los participantes es de S/.${(participants.map((e) => e.stratum).reduce((value, element) => value + element) / participants.length).toStringAsFixed(2)}',
+                                                      // random district
+                                                      'Los participantes pertenecen en su mayoría al distrito de ${getRandomElement(districts)}',
                                                       style: AppFontStyles
                                                           .primaryTextRegular14),
                                                 ),
@@ -214,7 +234,7 @@ class WorkshopScreen extends StatelessWidget {
                                                                   .all(16),
                                                           child: Center(
                                                             child: Text(
-                                                                'La municipalidad le destina S/.${pairParticipant.stratum} diarios',
+                                                                'Claudia vive en ${getRandomElement(districts)}',
                                                                 style: AppFontStyles
                                                                     .primaryTextRegular14),
                                                           ),

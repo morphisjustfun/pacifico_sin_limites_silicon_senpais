@@ -131,15 +131,62 @@ class DashboardScreen extends StatelessWidget {
                             SizedBox(
                               height: 20.h,
                             ),
-                            Center(
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16.h),
                               child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16.r),
+                                ),
                                 child: ListTile(
-                                  title: Text('Taller 1'),
-                                  subtitle: Text('Lunes 10:00'),
-                                  trailing: Text('Inscribirse'),
+                                  contentPadding: EdgeInsets.symmetric(
+                                      horizontal: 20.w, vertical: 10.h),
+                                  title: Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: Text(
+                                      // give a healthy finantial advice
+                                      "Protege tu dinero",
+                                      style: AppFontStyles.primaryTextBold16,
+                                    ),
+                                  ),
+                                  subtitle: Text("¿Cómo proteger tu dinero?",
+                                      style:
+                                          AppFontStyles.secondaryTextRegular12),
+                                  trailing: Text('Trending',
+                                      style: AppFontStyles.primaryTextSemiBold15
+                                          .copyWith(
+                                        color: AppColors.secondaryColor,
+                                      )),
                                 ),
                               ),
                             ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16.h),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16.r),
+                                ),
+                                child: ListTile(
+                                  contentPadding: EdgeInsets.symmetric(
+                                      horizontal: 20.w, vertical: 10.h),
+                                  title: Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: Text(
+                                      "Dale un descanso a tu tarjeta",
+                                      style: AppFontStyles.primaryTextBold16,
+                                    ),
+                                  ),
+                                  subtitle: Text(
+                                      "Beneficios de usar de forma regular tu tarjeta de crédito",
+                                      style:
+                                          AppFontStyles.secondaryTextRegular12),
+                                  trailing: Text('Trending',
+                                      style: AppFontStyles.primaryTextSemiBold15
+                                          .copyWith(
+                                        color: AppColors.secondaryColor,
+                                      )),
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),
