@@ -37,7 +37,7 @@ class AppFlatButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 8.w),
         textStyle: AppFontStyles.buttonMedium16,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(6.r)),
+            borderRadius: BorderRadius.all(Radius.circular(16.r)),
             side: BorderSide(color: borderColor)),
         disabledBackgroundColor: AppColors.disableColor,
         disabledForegroundColor: AppColors.disableTextColor,

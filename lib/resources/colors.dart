@@ -20,4 +20,6 @@ class AppColors {
   static const Color errorButtonColor = Color.fromRGBO(249, 35, 74, 1.0);
   static const Color brownishGrey = Color.fromRGBO(71, 79, 87, 1.0);
 
+  static const Color white = Color.fromRGBO(255, 255, 255, 1.0);
+
 }

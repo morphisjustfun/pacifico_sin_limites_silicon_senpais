@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/core/navigation/route.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/injectable.dart';
+import 'package:pacifico_sin_limites_silicon_senpais/resources/colors.dart';
 
 class App extends StatelessWidget {
   App({super.key}) {
@@ -27,7 +28,7 @@ class App extends StatelessWidget {
               ],
               title: 'Flutter Demo',
               theme: ThemeData(
-                primarySwatch: Colors.blue,
+                primaryColor: AppColors.primaryColor,
               ),
               onGenerateRoute: getIt<Routes>().router.generator,
               navigatorKey: Routes.navigatorKey,

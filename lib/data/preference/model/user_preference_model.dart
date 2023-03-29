@@ -4,6 +4,7 @@ part 'user_preference_model.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class UserPreferenceModel {
+  final String name;
   final String dni;
   final int age;
   final double lat;
@@ -11,8 +12,8 @@ class UserPreferenceModel {
   final double stratum;
   final int group;
 
-  UserPreferenceModel(
-      this.dni, this.age, this.lat, this.lon, this.stratum, this.group);
+  UserPreferenceModel(this.name, this.dni, this.age, this.lat, this.lon,
+      this.stratum, this.group);
 
   factory UserPreferenceModel.fromJson(Map<String, dynamic> json) =>
       _$UserPreferenceModelFromJson(json);

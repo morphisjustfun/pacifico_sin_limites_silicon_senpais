@@ -1,6 +1,8 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pacifico_sin_limites_silicon_senpais/core/navigation/route.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/injectable.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/bloc/login/login_form_cubit.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/bloc/login/login_form_state.dart';
@@ -51,9 +53,14 @@ class _AuthScreenState extends State<AuthScreen> {
             }
 
             if (state.errorSubmit) {
-              ErrorDialog(description: 'El DNI ingresado no es válido').show(context);
+              ErrorDialog(description: 'El DNI ingresado no es válido')
+                  .show(context);
             }
 
+            if (state.submitted) {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, getIt<Routes>().dashboard, (route) => false);
+            }
           },
           builder: (context, state) {
             return Scaffold(
@@ -65,11 +72,11 @@ class _AuthScreenState extends State<AuthScreen> {
                   children: [
                     Text(
                       AppStrings.auth.authTitle,
-                      style: AppFontStyles.primaryTextBold16,
+                      style: AppFontStyles.primaryTextBold32,
                     ),
                     Text(
                       AppStrings.auth.authTitle2,
-                      style: AppFontStyles.secondaryTextBold16,
+                      style: AppFontStyles.secondaryTextBold32,
                     ),
                     SizedBox(height: 20.h),
                     AppTextField(

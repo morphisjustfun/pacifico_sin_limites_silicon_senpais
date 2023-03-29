@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/gen/assets.gen.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/injectable.dart';
+import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/button/app_flat_button.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/presentation/widgets/dialog/base_dialog.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/resources/colors.dart';
 import 'package:pacifico_sin_limites_silicon_senpais/resources/font_styles.dart';
@@ -22,16 +23,16 @@ class ErrorDialog extends BaseDialog {
 
   @override
   Widget createAcceptButton({BuildContext? context}) {
-    return MaterialButton(
+    return AppFlatButton(
       onPressed: () {
         if (onAcceptButton != null) {
           onAcceptButton!();
         }
         getIt<FluroRouter>().pop(context!);
       },
-      color: AppColors.errorButtonColor,
-      child: Text(acceptButtonText ?? AppStrings.general.accept,
-          style: AppFontStyles.whiteMedium16),
+      text: acceptButtonText ?? AppStrings.general.accept,
+      backgroundColor: AppColors.secondaryColor,
+      textColor: AppColors.primaryTextColor,
     );
   }
 

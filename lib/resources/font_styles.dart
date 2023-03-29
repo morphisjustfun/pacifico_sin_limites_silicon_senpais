@@ -20,18 +20,81 @@ class AppFontStyles {
     color: AppColors.primaryTextColor,
   );
 
-  static TextStyle primaryTextBold16 = TextStyle(
+  static TextStyle primaryTextBold32 = TextStyle(
     fontFamily: _primaryFontFamily,
     fontWeight: FontWeight.w700,
     fontSize: 32.sp,
     color: AppColors.secondaryTextColor,
   );
 
-  static TextStyle secondaryTextBold16 = TextStyle(
+  static TextStyle primaryTextBold24 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 24.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle primaryTextRegular14 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 14.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle primaryTextRegular16 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 16.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle primaryTextRegular20 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 20.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle primaryTextBold20 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 20.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle primaryTextBold16 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 16.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle secondaryTextBold32 = TextStyle(
     fontFamily: _primaryFontFamily,
     fontWeight: FontWeight.w700,
     fontSize: 32.sp,
     color: AppColors.secondaryColor,
+  );
+
+  static TextStyle secondaryTextBold20 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 20.sp,
+    color: AppColors.secondaryColor,
+  );
+
+  static TextStyle primaryTextBold14 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w700,
+    fontSize: 16.sp,
+    color: AppColors.secondaryTextColor,
+  );
+
+  static TextStyle secondaryTextRegular12 = TextStyle(
+    fontFamily: _primaryFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 12.sp,
+    color: AppColors.secondaryTextColor,
   );
 
   static TextStyle greyIconColorRegular14 = TextStyle(
