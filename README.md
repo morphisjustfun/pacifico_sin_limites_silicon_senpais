@@ -1,16 +1,20 @@
 # pacifico_sin_limites_silicon_senpais
 
-A new Flutter project.
+## Nombre de grupo
 
-## Getting Started
+Silicon Senpais
 
-This project is a starting point for a Flutter application.
+## Descripción
 
-A few resources to get you started if this is your first Flutter project:
+Proyecto para concurso Pacífico sin Límites 2023
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Integrantes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Jose Huby
+- Luis Berrospi
+- Noemi Ramirez
+- Mario Rios
+
+## Presentación
+
+Link de diapositivas de proyecto: [Presentación](https://docs.google.com/presentation/d/17mL8zQxO1dMChrEV8XO8LOiigUlKgUGiZNyTE5fH_sg/edit#slide=id.g22828f330f9_1_507)
